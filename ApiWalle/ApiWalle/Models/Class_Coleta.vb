@@ -110,12 +110,12 @@
         End Set
     End Property
 
-    Private _Date_Hora_Fim As String
-    Public Property Date_Hora_Fim() As String
+    Private _Date_Hora_Fim As Date
+    Public Property Date_Hora_Fim() As Date
         Get
             Return _Date_Hora_Fim
         End Get
-        Set(ByVal value As String)
+        Set(ByVal value As Date)
             _Date_Hora_Fim = value
         End Set
     End Property

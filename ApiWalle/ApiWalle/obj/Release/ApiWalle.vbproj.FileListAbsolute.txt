@@ -51,4 +51,3 @@ C:\Users\luizh\source\ApiWalle\ApiWalle\ApiWalle\obj\Release\ApiWalle.vbproj.Cor
 C:\Users\luizh\source\ApiWalle\ApiWalle\ApiWalle\obj\Release\ApiWalle.dll
 C:\Users\luizh\source\ApiWalle\ApiWalle\ApiWalle\obj\Release\ApiWalle.xml
 C:\Users\luizh\source\ApiWalle\ApiWalle\ApiWalle\obj\Release\ApiWalle.pdb
-C:\Users\luizh\source\ApiWalle\ApiWalle\ApiWalle\obj\Release\ApiWalle.vbprojResolveAssemblyReference.cache

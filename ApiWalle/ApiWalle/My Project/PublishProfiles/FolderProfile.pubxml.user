@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\luizh\source\ApiWalle\ApiWalle\ApiWalle\bin\Release\PublishOutput</_PublishTargetUrl>
+    <_PublishTargetUrl>V:\inetpub\wwwroot\walleapi</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
@@ -82,13 +82,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/22/2013 07:43:40</publishTime>
     </File>
     <File Include="bin/ApiWalle.dll">
-      <publishTime>03/01/2018 22:52:48</publishTime>
+      <publishTime>03/06/2018 18:33:21</publishTime>
     </File>
     <File Include="bin/ApiWalle.pdb">
-      <publishTime>03/01/2018 22:52:48</publishTime>
+      <publishTime>03/06/2018 18:33:21</publishTime>
     </File>
     <File Include="bin/ApiWalle.xml">
-      <publishTime>03/01/2018 22:52:48</publishTime>
+      <publishTime>03/06/2018 18:33:21</publishTime>
     </File>
     <File Include="bin/ApplicationInsights.config">
       <publishTime>03/01/2018 20:39:34</publishTime>
@@ -121,7 +121,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/05/2012 11:08:46</publishTime>
     </File>
     <File Include="bin/MySql.Data.dll">
-      <publishTime>12/03/2017 14:21:42</publishTime>
+      <publishTime>01/18/2018 08:59:04</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>08/03/2014 19:33:56</publishTime>
@@ -246,6 +246,39 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Content/Site.css">
       <publishTime>03/01/2018 20:38:48</publishTime>
     </File>
+    <File Include="docs/MySqlCommand.xml">
+      <publishTime>03/01/2018 23:01:55</publishTime>
+    </File>
+    <File Include="docs/MySqlCommandBuilder.xml">
+      <publishTime>03/01/2018 23:01:55</publishTime>
+    </File>
+    <File Include="docs/MySqlConnection.xml">
+      <publishTime>03/01/2018 23:01:55</publishTime>
+    </File>
+    <File Include="docs/MySqlConnectionStringBuilder.xml">
+      <publishTime>03/01/2018 23:01:55</publishTime>
+    </File>
+    <File Include="docs/MySqlDataAdapter.xml">
+      <publishTime>03/01/2018 23:01:55</publishTime>
+    </File>
+    <File Include="docs/MySqlDataReader.xml">
+      <publishTime>03/01/2018 23:01:55</publishTime>
+    </File>
+    <File Include="docs/MySqlException.xml">
+      <publishTime>03/01/2018 23:01:55</publishTime>
+    </File>
+    <File Include="docs/MySqlHelper.xml">
+      <publishTime>03/01/2018 23:01:55</publishTime>
+    </File>
+    <File Include="docs/MySqlParameter.xml">
+      <publishTime>03/01/2018 23:01:55</publishTime>
+    </File>
+    <File Include="docs/MySqlParameterCollection.xml">
+      <publishTime>03/01/2018 23:01:55</publishTime>
+    </File>
+    <File Include="docs/MySqlTransaction.xml">
+      <publishTime>03/01/2018 23:01:55</publishTime>
+    </File>
     <File Include="favicon.ico">
       <publishTime>03/01/2018 20:38:48</publishTime>
     </File>
@@ -304,7 +337,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/01/2018 20:38:48</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>03/01/2018 22:52:49</publishTime>
+      <publishTime>03/06/2018 18:16:34</publishTime>
     </File>
   </ItemGroup>
 </Project>

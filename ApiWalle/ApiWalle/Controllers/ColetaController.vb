@@ -12,6 +12,10 @@ Namespace Controllers
             Return repository.GetTodos()
         End Function
 
+        Public Function PostColeta(item As List(Of Class_Coleta)) As List(Of String)
+            Return repository.Adicionar(item)
+        End Function
+
     End Class
 
 

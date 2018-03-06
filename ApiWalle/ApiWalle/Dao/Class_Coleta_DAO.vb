@@ -1,9 +1,87 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Option Strict Off
+Imports MySql.Data.MySqlClient
 Imports System.Text
 
 Public Class Class_Coleta_DAO
 
     Private BD As New Connection
+
+    Public Function Insert(ByVal Lista As List(Of Class_Coleta)) As List(Of String)
+
+        Dim Conn As New MySqlConnection
+        Dim Command As MySqlCommand
+        Dim Retorno As String = String.Empty
+        Dim ListaRetorno As New List(Of String)
+
+        Try
+
+            Conn = BD.GetConexao()
+
+            For Each Item As Class_Coleta In Lista
+
+                Try
+
+                    Dim Sql As New StringBuilder
+
+                    Sql.Append("INSERT INTO Db_Walle_v4.tb_coleta (Cod_Cliente, Des_Usuario_Rede, Des_Processo, Cod_Categoria_App, Des_Nome, Cod_Categoria_Page, " &
+                             "Des_URL, Cod_Categoria_url, Des_Local, Date_Hora_Inicio, Date_Hora_Fim, Int_Tempo, Des_Identificador_PC, Des_Chave_Processo, " &
+                             "Cod_Cliente_Usuario, Des_Versao, Des_Rastrear) VALUES (@Cod_Cliente, @Des_Usuario_Rede, @Des_Processo, @Cod_Categoria_App, " &
+                             "@Des_Nome, @Cod_Categoria_Page, @Des_URL, @Cod_Categoria_url, @Des_Local, @Date_Hora_Inicio, @Date_Hora_Fim, @Int_Tempo, " &
+                             "@Des_Identificador_PC, @Des_Chave_Processo, @Cod_Cliente_Usuario, @Des_Versao, @Des_Rastrear)")
+
+                    Command = New MySqlCommand
+                    Command.Connection = Conn
+                    Command.CommandType = CommandType.Text
+                    Command.CommandText = Sql.ToString
+
+                    Command.Parameters.AddWithValue("@Cod_Cliente", Item.Cod_Cliente)
+                    Command.Parameters.AddWithValue("@Des_Usuario_Rede", Item.Des_Usuario_Rede)
+                    Command.Parameters.AddWithValue("@Des_Processo", Item.Des_Processo)
+                    Command.Parameters.AddWithValue("@Cod_Categoria_App", DBNull.Value)
+                    Command.Parameters.AddWithValue("@Des_Nome", Item.Des_Nome)
+                    Command.Parameters.AddWithValue("@Cod_Categoria_Page", DBNull.Value)
+                    Command.Parameters.AddWithValue("@Des_URL", Item.Des_URL)
+                    Command.Parameters.AddWithValue("@Cod_Categoria_url", DBNull.Value)
+                    Command.Parameters.AddWithValue("@Des_Local", Item.Des_Local)
+                    Command.Parameters.AddWithValue("@Date_Hora_Inicio", Item.Date_Hora_Inicio)
+                    Command.Parameters.AddWithValue("@Date_Hora_Fim", Item.Date_Hora_Fim)
+                    Command.Parameters.AddWithValue("@Int_Tempo", Item.Int_Tempo)
+                    Command.Parameters.AddWithValue("@Des_Identificador_PC", Item.Des_Identificador_PC)
+                    Command.Parameters.AddWithValue("@Des_Chave_Processo", Item.Des_Chave_Processo)
+                    Command.Parameters.AddWithValue("@Cod_Cliente_Usuario", DBNull.Value)
+                    Command.Parameters.AddWithValue("@Des_Versao", Item.Des_Versao)
+                    Command.Parameters.AddWithValue("@Des_Rastrear", Item.Des_Rastrear)
+
+                    Command.ExecuteNonQuery()
+
+                    Retorno = Lista.IndexOf(Item).ToString & " - Sucesso"
+
+                Catch ex As Exception
+
+                    Retorno = Lista.IndexOf(Item).ToString & " - " & ex.Message
+
+                End Try
+
+                ListaRetorno.Add(Retorno)
+            Next
+
+        Catch ex As Exception
+
+            Retorno = ex.Message
+            ListaRetorno.Add(Retorno)
+            'Log de erro do insert do dado
+
+        Finally
+
+            BD.CloseConexao(Conn)
+
+        End Try
+
+        Return ListaRetorno
+
+
+    End Function
+
 
     Public Function ListAll(ByVal Sql As String) As List(Of Class_Coleta)
 
@@ -49,7 +127,7 @@ Public Class Class_Coleta_DAO
                     }
 
                     Lista.Add(Item)
-                    
+
                 End While
             End If
 
@@ -59,6 +137,7 @@ Public Class Class_Coleta_DAO
 
         Finally
 
+            BD.CloseConexao(Conn)
 
         End Try
 

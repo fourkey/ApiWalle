@@ -20,8 +20,12 @@ Public Class Class_Coleta_Repositorio
         Throw New NotImplementedException()
     End Function
 
-    Public Function Adicionar(Obj As Class_Coleta) As Class_Coleta Implements IColetaRepositorio.Adicionar
-        Throw New NotImplementedException()
+    Public Function Adicionar(Obj As List(Of Class_Coleta)) As List(Of String) Implements IColetaRepositorio.Adicionar
+
+        Dim Status As List(Of String)
+        Status = DAO.Insert(Obj)
+        Return Status
+
     End Function
 
     Public Function Atualizar(Obj As Class_Coleta) As Boolean Implements IColetaRepositorio.Atualizar
